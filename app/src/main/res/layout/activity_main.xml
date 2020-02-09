@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="start"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO!!!"
+        android:id="@+id/stratButton"
+        android:textSize="80sp"
+        android:padding="40dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="start"
+        android:visibility="visible"
+        android:background="#3bcc75"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/gameRelative">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30s"
+            android:id="@+id/timerTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textSize="30sp"
+            android:background="#fffffb2e"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:id="@+id/pointsTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:background="#ffff8807" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="31+12"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:id="@+id/sumTextView"
+            android:textColor="#ff141414"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sumTextView"
+            android:id="@+id/gridLayout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true">
+
+
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="3"
+               android:layout_column="0"
+               android:layout_row="0"
+               android:layout_columnWeight="1"
+               android:layout_rowWeight="1"
+               android:layout_gravity="fill"
+               android:tag="0"
+               android:textSize="80sp"
+               android:id="@+id/button0"
+               android:onClick="chooseAnswer"
+               android:background="#ff444eff"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="1"
+                android:textSize="80sp"
+                android:id="@+id/button1"
+                android:onClick="chooseAnswer"
+                android:background="#91f9a4"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="2"
+                android:textSize="80sp"
+                android:id="@+id/button2"
+                android:onClick="chooseAnswer"
+                android:background="#ff2530"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="3"
+                android:textSize="80sp"
+                android:id="@+id/button3"
+                android:onClick="chooseAnswer"
+                android:background="#fff822"/>
+        </GridLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultTextView"
+            android:textSize="40sp"
+            android:layout_below="@+id/gridLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Again"
+            android:id="@+id/playAgainButton"
+            android:layout_below="@+id/resultTextView"
+            android:layout_alignStart="@+id/sumTextView"
+            android:layout_marginTop="25dp"
+            android:onClick="playAgain"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
